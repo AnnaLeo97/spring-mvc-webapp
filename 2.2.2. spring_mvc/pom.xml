@@ -12,6 +12,8 @@
 
     <properties>
         <spring.version>5.2.0.RELEASE</spring.version>
+        <servlet.version>4.0.0</servlet.version>
+        <jstl.version>1.2</jstl.version>
     </properties>
 
     <dependencies>
@@ -34,6 +36,19 @@
             <groupId>org.thymeleaf</groupId>
             <artifactId>thymeleaf-spring5</artifactId>
             <version>3.0.9.RELEASE</version>
+        </dependency>
+
+        <dependency>
+            <groupId>jstl</groupId>
+            <artifactId>jstl</artifactId>
+            <version>${jstl.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet.version}</version>
+            <scope>provided</scope>
         </dependency>
 
     </dependencies>
