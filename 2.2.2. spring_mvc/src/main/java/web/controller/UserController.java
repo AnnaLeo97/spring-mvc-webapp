@@ -40,7 +40,7 @@ public class UserController {
     }
 
     @GetMapping("/edit/{id}")
-    public ModelAndView editUserForm(@RequestParam long id) {
+    public ModelAndView editUserForm(@PathVariable long id) {
         ModelAndView mav = new ModelAndView("edit_user");
         User user = userService.get((int) id);
         mav.addObject("user", user);
@@ -56,7 +56,7 @@ public class UserController {
     }
 
     @GetMapping("/delete/{id}")
-    public String deleteUserForm(@RequestParam long id) {
+    public String deleteUserForm(@PathVariable long id) {
         userService.delete((int) id);
         return "redirect:/";
     }
